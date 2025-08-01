@@ -1,27 +1,31 @@
+import realTimeTrackingIcon from "../../../assets/images/real-time-tracking.svg";
+import reliableServiceIcon from "../../../assets/images/reliable-service.svg";
+import userFriendlyIcon from "../../../assets/images/user-friendly.svg";
 import "./FeaturesSection.css";
 
 const FeaturesSection = () => {
   const features = [
     {
-      icon: "/assets/images/real-time-tracking.svg",
+      icon: realTimeTrackingIcon, // Imported reference
       title: "Real-Time Tracking",
       description:
         "Track your shipments in real-time and stay updated on delivery progress every step.",
     },
     {
-      icon: "/assets/images/reliable-service.svg",
+      icon: reliableServiceIcon, // Imported reference
       title: "Reliable Service",
       description:
         "Count on our dedicated delivery network for timely and secure package deliveries.",
     },
     {
-      icon: "/assets/images/user-friendly.svg",
+      icon: userFriendlyIcon, // Imported reference
       title: "User-Friendly App",
       description:
         "Enjoy a smooth and intuitive app interface designed for easy navigation and booking.",
     },
   ];
 
+  // Rest of component remains the same
   return (
     <section className="features-section">
       <div className="container">
