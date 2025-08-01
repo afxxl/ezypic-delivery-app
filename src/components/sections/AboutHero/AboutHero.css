@@ -1,0 +1,277 @@
+.about-hero {
+  background: var(--white);
+  padding: 2rem 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.about-content {
+  width: 100%;
+}
+
+/* Content Grid */
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+/* Text Content */
+.text-content {
+  max-width: 100%;
+}
+
+.main-heading {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #003d66;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  letter-spacing: -0.5px;
+  text-align: center;
+}
+
+.description-text {
+  margin-bottom: 2.5rem;
+}
+
+.description-text p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.description-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* Key Features */
+.key-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  background: #f8fafc;
+  border-radius: 25px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.2s ease;
+}
+
+.feature:hover {
+  background: var(--white);
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 193, 7, 0.15);
+}
+
+.feature-icon {
+  font-size: 1.2rem;
+}
+
+.feature span:last-child {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* Image Content */
+.image-content {
+  display: flex;
+  justify-content: center;
+}
+
+.delivery-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 20px;
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.1));
+}
+
+/* Tablet Styles */
+@media (min-width: 768px) {
+  .about-hero {
+    padding: 4rem 0;
+  }
+
+  .container {
+    padding: 0 2rem;
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+
+  .main-heading {
+    font-size: 3rem;
+    text-align: left;
+  }
+
+  .description-text p {
+    font-size: 1.15rem;
+    text-align: left;
+  }
+
+  .key-features {
+    justify-content: flex-start;
+  }
+
+  .delivery-image {
+    max-width: 450px;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+  .about-hero {
+    padding: 5rem 0;
+  }
+
+  .content-grid {
+    gap: 6rem;
+  }
+
+  .main-heading {
+    font-size: 3.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .description-text {
+    margin-bottom: 3rem;
+  }
+
+  .description-text p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .key-features {
+    gap: 2rem;
+  }
+
+  .feature {
+    padding: 1rem 1.5rem;
+  }
+
+  .feature span:last-child {
+    font-size: 1rem;
+  }
+
+  .delivery-image {
+    max-width: 500px;
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1200px) {
+  .content-grid {
+    gap: 8rem;
+  }
+
+  .main-heading {
+    font-size: 4rem;
+  }
+
+  .description-text p {
+    font-size: 1.25rem;
+  }
+}
+
+/* Mobile Optimizations */
+@media (max-width: 767px) {
+  .about-hero {
+    padding: 3rem 0;
+  }
+
+  .content-grid {
+    gap: 2rem;
+  }
+
+  .main-heading {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .description-text {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .description-text p {
+    font-size: 1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .key-features {
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .feature {
+    padding: 0.6rem 1rem;
+  }
+
+  .feature span:last-child {
+    font-size: 0.9rem;
+  }
+
+  .delivery-image {
+    max-width: 320px;
+  }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .main-heading {
+    font-size: 1.8rem;
+  }
+
+  .key-features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature {
+    width: 100%;
+    max-width: 200px;
+    justify-content: center;
+  }
+
+  .delivery-image {
+    max-width: 280px;
+  }
+}
+
+/* Very Small Screens */
+@media (max-width: 375px) {
+  .main-heading {
+    font-size: 1.6rem;
+  }
+
+  .delivery-image {
+    max-width: 250px;
+  }
+}

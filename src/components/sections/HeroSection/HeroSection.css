@@ -1,0 +1,366 @@
+.hero-section {
+  background: var(--white);
+  padding: 4rem 0;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem; /* Increased from 3rem */
+  align-items: center;
+}
+
+/* Left Content */
+.hero-left {
+  text-align: center;
+  padding: 0 1rem; /* Added horizontal padding */
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  letter-spacing: -1px;
+}
+
+.highlight {
+  color: var(--secondary-color);
+  position: relative;
+}
+
+.hero-description {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 2.5rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero-btn {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  min-width: 140px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary.hero-btn {
+  background: linear-gradient(135deg, var(--primary-color) 0%, #ffb300 100%);
+  color: var(--white);
+  box-shadow: 0 6px 20px rgba(255, 193, 7, 0.3);
+}
+
+.btn-primary.hero-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(255, 193, 7, 0.4);
+}
+
+.btn-secondary.hero-btn {
+  background: var(--white);
+  color: var(--text-primary);
+  border: 2px solid var(--border-color);
+}
+
+.btn-secondary.hero-btn:hover {
+  background: var(--light-bg);
+  border-color: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+/* Right Content - Mobile SVG */
+.hero-right {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding: 0 1rem; /* Added horizontal padding */
+}
+
+.mobile-container {
+  position: relative;
+  max-width: 400px;
+  width: 100%;
+}
+
+.mobile-image {
+  width: 100%;
+  height: auto;
+  max-width: 350px;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.15));
+}
+
+/* Optional Floating Elements */
+.floating-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.floating-box {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: var(--primary-color);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: 0 8px 20px rgba(255, 193, 7, 0.3);
+  animation: floatAround 4s ease-in-out infinite;
+}
+
+.floating-box-1 {
+  top: 20%;
+  right: -10%;
+  animation-delay: 0s;
+}
+
+.floating-box-2 {
+  bottom: 30%;
+  left: -5%;
+  background: #10b981;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  animation-delay: 1s;
+}
+
+.floating-pin {
+  position: absolute;
+  top: 15%;
+  left: -8%;
+  font-size: 2rem;
+  background: var(--primary-color);
+  width: 45px;
+  height: 45px;
+  border-radius: 50% 50% 50% 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-45deg);
+  box-shadow: 0 8px 20px rgba(255, 193, 7, 0.4);
+  animation: pulse 2s infinite;
+}
+
+.floating-pin::before {
+  content: "📍";
+  transform: rotate(45deg);
+  font-size: 1.3rem;
+}
+
+/* Animations */
+@keyframes floatAround {
+  0%,
+  100% {
+    transform: translateY(0px) translateX(0px);
+    opacity: 0.8;
+  }
+  25% {
+    transform: translateY(-10px) translateX(5px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-5px) translateX(-3px);
+    opacity: 0.9;
+  }
+  75% {
+    transform: translateY(-12px) translateX(8px);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: rotate(-45deg) scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: rotate(-45deg) scale(1.1);
+    opacity: 1;
+  }
+}
+
+/* Desktop Layout */
+@media (min-width: 768px) {
+  .hero-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem; /* Increased from 4rem */
+  }
+
+  .hero-left {
+    text-align: left;
+    padding: 0 2rem 0 0; /* Added right padding for desktop */
+  }
+
+  .hero-right {
+    padding: 0 0 0 2rem; /* Added left padding for desktop */
+  }
+
+  .hero-title {
+    font-size: 3.5rem;
+  }
+
+  .hero-description {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .hero-actions {
+    justify-content: flex-start;
+  }
+
+  .mobile-container {
+    max-width: 450px;
+  }
+
+  .mobile-image {
+    max-width: 400px;
+  }
+
+  .floating-box {
+    width: 60px;
+    height: 60px;
+    font-size: 1.8rem;
+  }
+
+  .floating-pin {
+    width: 55px;
+    height: 55px;
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-section {
+    padding: 6rem 0;
+  }
+
+  .hero-content {
+    gap: 8rem; /* Increased from 6rem for large screens */
+  }
+
+  .hero-left {
+    padding: 0 3rem 0 0; /* More padding on larger screens */
+  }
+
+  .hero-right {
+    padding: 0 0 0 3rem; /* More padding on larger screens */
+  }
+
+  .hero-title {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-description {
+    font-size: 1.25rem;
+    margin-bottom: 3rem;
+  }
+
+  .mobile-container {
+    max-width: 500px;
+  }
+
+  .mobile-image {
+    max-width: 450px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero-content {
+    gap: 10rem; /* Even more space on very large screens */
+  }
+
+  .hero-left {
+    padding: 0 4rem 0 0;
+  }
+
+  .hero-right {
+    padding: 0 0 0 4rem;
+  }
+}
+
+/* Mobile Optimizations */
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 2rem 0;
+  }
+
+  .hero-content {
+    gap: 3rem; /* Appropriate spacing for mobile */
+  }
+
+  .hero-left {
+    padding: 0 0.5rem; /* Reduced padding on mobile */
+  }
+
+  .hero-right {
+    padding: 0 0.5rem; /* Reduced padding on mobile */
+  }
+
+  .hero-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-btn {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .mobile-container {
+    max-width: 300px;
+  }
+
+  .mobile-image {
+    max-width: 280px;
+  }
+
+  .floating-box {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+
+  .floating-pin {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+}
+
+/* Hide floating elements on very small screens */
+@media (max-width: 375px) {
+  .floating-elements {
+    display: none;
+  }
+}
