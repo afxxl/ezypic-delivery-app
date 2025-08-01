@@ -29,7 +29,8 @@
 }
 
 .highlight {
-  color: var(--secondary-color);
+  color: #19374a;
+
   position: relative;
 }
 
