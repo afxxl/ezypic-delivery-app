@@ -3,19 +3,19 @@ import "./FeaturesSection.css";
 const FeaturesSection = () => {
   const features = [
     {
-      icon: "/src/assets/images/real-time-tracking.svg",
+      icon: "/assets/images/real-time-tracking.svg",
       title: "Real-Time Tracking",
       description:
         "Track your shipments in real-time and stay updated on delivery progress every step.",
     },
     {
-      icon: "/src/assets/images/reliable-service.svg",
+      icon: "/assets/images/reliable-service.svg",
       title: "Reliable Service",
       description:
         "Count on our dedicated delivery network for timely and secure package deliveries.",
     },
     {
-      icon: "/src/assets/images/user-friendly.svg",
+      icon: "/assets/images/user-friendly.svg",
       title: "User-Friendly App",
       description:
         "Enjoy a smooth and intuitive app interface designed for easy navigation and booking.",
