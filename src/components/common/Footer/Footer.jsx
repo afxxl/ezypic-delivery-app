@@ -46,7 +46,7 @@ const Footer = () => {
             <h3 className="section-title">Get Started</h3>
             <div className="contact-info">
               <div className="contact-item">
-                <span>📧 support@ezypic.com</span>
+                <span>📧 jabir@ezypic.in</span>
               </div>
               <div className="contact-item">
                 <span>📞 +1 (555) 123-4567</span>
