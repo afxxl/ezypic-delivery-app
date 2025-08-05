@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logoSvg from "../../../assets/images/logo.svg";
+import logoSvg from "../../../assets/images/logo.png";
 import "./Footer.css";
 
 const Footer = () => {
@@ -63,7 +63,10 @@ const Footer = () => {
               © {currentYear} EZYPIC. All rights reserved.
             </p>
             <div className="footer-links-bottom">
-              <a href="#" className="bottom-link">
+              <a
+                href="https://sites.google.com/view/ezypic-privacy-policy/home"
+                className="bottom-link"
+              >
                 Privacy
               </a>
               <a href="#" className="bottom-link">

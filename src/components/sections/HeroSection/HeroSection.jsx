@@ -1,4 +1,4 @@
-import mobileScreenSvg from "../../../assets/images/mobile-screen.svg"; // Update path as needed
+import mobileScreenSvg from "../../../assets/images/mobile-screen.png"; // Update path as needed
 import "./HeroSection.css";
 
 const HeroSection = () => {

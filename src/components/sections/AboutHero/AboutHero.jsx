@@ -1,4 +1,4 @@
-import deliveryTruckImg from "../../../assets/images/delivery-truck.svg";
+import deliveryTruckImg from "../../../assets/images/delivery-truck.png";
 import "./AboutHero.css";
 
 const AboutHero = () => {

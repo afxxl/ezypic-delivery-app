@@ -1,4 +1,4 @@
-import deliveryBoyImg from "../../../assets/images/delivery-boy.svg";
+import deliveryBoyImg from "../../../assets/images/delivery-boy.png";
 import "./ServicesSection.css";
 
 const ServicesSection = () => {
