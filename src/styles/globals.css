@@ -124,3 +124,127 @@ body {
     display: none;
   }
 }
+
+.qr-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: modalFadeIn 0.3s ease-out;
+}
+
+.qr-content {
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+  padding: 2.5rem;
+  border-radius: 16px;
+  color: white;
+  max-width: 380px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  animation: modalSlideIn 0.3s ease-out;
+  border: 1px solid rgba(255, 193, 7, 0.2);
+}
+
+.qr-content h2 {
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.qr-code-wrapper {
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  margin: 1.5rem 0;
+  display: inline-block;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.qr-content p {
+  margin-bottom: 1.5rem;
+  color: #e2e8f0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.qr-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.qr-buttons .btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.qr-buttons .btn-primary {
+  background: linear-gradient(135deg, var(--primary-color) 0%, #ffb300 100%);
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.qr-buttons .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 193, 7, 0.4);
+}
+
+.qr-buttons .btn-secondary {
+  background: transparent;
+  color: #e2e8f0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.qr-buttons .btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 480px) {
+  .qr-content {
+    margin: 1rem;
+    padding: 2rem 1.5rem;
+    max-width: calc(100vw - 2rem);
+  }
+
+  .qr-buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .qr-buttons .btn {
+    width: 100%;
+  }
+}
